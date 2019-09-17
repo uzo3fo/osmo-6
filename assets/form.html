@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OSMO-6: a freelance market</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script type="text/javascript" src="./js/libs/jQuery.js"></script>
 </head>
 <body>
     <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-danger bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">OSMO-6</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,39 +20,36 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Get A Freelancer <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="freelancer.html">Get A Freelancer <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sign-Up</a>
+              <a class="nav-link" href="#"></a>
             </li>
         </div>
       </nav>
       <!--form-->
   <div class="container">
-        <div class="jumbotron text-center">
-          <h1 class="display-4">OSMO-6 SIGN-UP</h1>
-          <p>Sign-up to join the growing number of six-stars freelancer</p>
-      </div>
     <form action="http://localhost:3000/freelancer" method="POST" class="text-center" id="postForm">
-      <div class="form-group p-3">
+      <h1 id="sign-up">SIGN-UP</h1>
+      <div class="form-group p-1">
           <label for="name">Name:</label>
           <input type="text" id="name" placeholder="odumodu">
        </div>
-       <div class="form group p-3">
+       <div class="form group p-1">
           <label for="email">Email:</label>
           <input type="email" id="email" placeholder="example@gmail.com">
        </div>
-       <div class="form group p-3">
+       <div class="form group p-1">
         <label for="email">Country:</label>
-        <input type="email" id="email" placeholder="eg Congo">
+        <input type="email" id="country" placeholder="eg Congo">
        </div>   
-       <div class="form group p-3">
-        <label for="email">Skills:</label>
-        <input type="email" id="email" placeholder="eg Graphic design, photography">
+       <div class="form group p-1">
+        <label for="email">Skills: </label>
+        <input type="email" id="skills" placeholder="eg Graphic design">
        </div>   
-       <div class="form group p-3">
+       <div class="form group p-1">
         <label for="email">Education:</label>
-        <input type="email" id="email" placeholder="eg Bsc. Economics, University of Nigeria">
+        <input type="email" id="education" placeholder="eg Bsc. Economics">
       </div>
       <div class="form group">
         <label for="email">Description:</label>
@@ -60,7 +57,7 @@
         <small>Tell your clients what you can do</small>
      </div>         
       
-      <button type="submit" value="Submit" class="btn btn-secondary">Submit</button>
+      <button type="submit" value="Submit" class="btn btn-primary" id="submit-button">Submit</button>
     </form>
   </div>
         
