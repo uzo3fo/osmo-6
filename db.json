@@ -5,9 +5,9 @@
       "name": "Bola",
       "email": "Bola@gmail.com",
       "country": "Nigeria",
-      "skills": "photographer",
-      "Education": "B.A. Music, University of Nigeria, Nsukka",
-      "Description":"I create quality photos for ceremonies and individual potraits"
+      "skill": "photographer",
+      "education": "B.A. Music",
+      "description":"I create quality photos for ceremonies and individual potraits"
     }
     ]
   }

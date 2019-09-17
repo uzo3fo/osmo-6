@@ -7,7 +7,7 @@
     <title>OSMO-6: a freelance market</title>
     <link rel="stylesheet" href="./css/freelancer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script type="text/javascript" src="./js/libs/jQuery.js"></script>
+    <!--<script type="text/javascript" src="./js/libs/jQuery.js"></script>-->
 </head>
 <body>
     <!--navbar-->
@@ -29,21 +29,27 @@
       </nav>
 
 
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>Skill</th>
+            <th>Education</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody id="freelancer-list">
+
+        </tbody>
+
+      </table>
+
+
+    
         
-
-
-    <script src="./js/script.js"></script>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./js/script.js"></script>
 </html>
