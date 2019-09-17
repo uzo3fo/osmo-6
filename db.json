@@ -7,8 +7,74 @@
       "country": "Nigeria",
       "skill": "photographer",
       "education": "B.A. Music",
-      "description":"I create quality photos for ceremonies and individual potraits"
+      "description": "I create quality photos for ceremonies and individual potraits"
+    },
+    {
+      "description": "ewhfiojo  iwebnf",
+      "id": 2
+    },
+    {
+      "name": "rfgre",
+      "email": "eeefe@gmail.com",
+      "country": "Wakanda",
+      "skills": "ASP.Net developer",
+      "education": "Bsc. Computer science",
+      "description": "mbjhguygi",
+      "id": 3
+    },
+    {
+      "name": "swdws",
+      "email": "csc@gmail.com",
+      "country": "Congo",
+      "skills": "ggraphic design",
+      "education": "Bsc. Economics",
+      "description": "ejihifir hefirhifhri",
+      "id": 4
+    },
+    {
+      "name": "swdws",
+      "email": "csc@gmail.com",
+      "country": "Congo",
+      "skills": "ggraphic design",
+      "education": "Bsc. Economics",
+      "description": "ejihifir hefirhifhri",
+      "id": 5
+    },
+    {
+      "name": "swdws",
+      "email": "csc@gmail.com",
+      "country": "Congo",
+      "skills": "ggraphic design",
+      "education": "Bsc. Economics",
+      "description": "ejihifir hefirhifhri",
+      "id": 6
+    },
+    {
+      "name": "wqd",
+      "email": "eeefe@gmail.com",
+      "country": "Rwanda",
+      "skills": "seo expert",
+      "education": "Bsc. Economics",
+      "description": "dgjdoijg ognonws",
+      "id": 7
+    },
+    {
+      "name": "odumodu",
+      "email": "dds@yahoo.com",
+      "country": "Rwanda",
+      "skills": "ASP.Net developer",
+      "education": "Bsc. Computer science",
+      "description": "wfwefe wfefwe wf f",
+      "id": 8
+    },
+    {
+      "name": "fabian",
+      "email": "email@gmail.com",
+      "country": "Wakanda",
+      "skills": "seo expert",
+      "education": "BA. French",
+      "description": "uitpyiyho",
+      "id": 9
     }
-    ]
-  }
-    
+  ]
+}
