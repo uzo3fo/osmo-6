@@ -10,71 +10,58 @@
       "description": "I create quality photos for ceremonies and individual potraits"
     },
     {
-      "description": "ewhfiojo  iwebnf",
+      "name": "fred",
+      "email": "fred@gmail.com",
+      "country": "Finland",
+      "skill": "Web developer",
+      "education": "Bsc. Computer science",
+      "description": "I will build a robust application for, with the required functionality.",
       "id": 2
     },
     {
-      "name": "rfgre",
-      "email": "eeefe@gmail.com",
-      "country": "Wakanda",
-      "skills": "ASP.Net developer",
-      "education": "Bsc. Computer science",
-      "description": "mbjhguygi",
+      "name": "Kutz",
+      "email": "kutz@gmail.com",
+      "country": "Germany",
+      "skill": "Graphics designer",
+      "education": "BA. Fine Arts",
+      "description": "I will design quality logos, banners and illustrations for you.",
       "id": 3
     },
     {
-      "name": "swdws",
-      "email": "csc@gmail.com",
-      "country": "Congo",
-      "skills": "ggraphic design",
-      "education": "Bsc. Economics",
-      "description": "ejihifir hefirhifhri",
+      "name": "Kim JUN UN",
+      "email": "kjn@gmail.com",
+      "country": "North Korea",
+      "skill": "Nuclear physicist",
+      "education": "Bsc. Physics",
+      "description": "...just email me privately",
       "id": 4
     },
     {
-      "name": "swdws",
-      "email": "csc@gmail.com",
-      "country": "Congo",
-      "skills": "ggraphic design",
-      "education": "Bsc. Economics",
-      "description": "ejihifir hefirhifhri",
+      "name": "Phoebe",
+      "email": "phoebe@gmail.com",
+      "country": "Rwanda",
+      "skill": "content writer",
+      "education": "BA. African studies",
+      "description": "I will create engaging contents  for your blogs or websites.",
       "id": 5
     },
     {
-      "name": "swdws",
-      "email": "csc@gmail.com",
-      "country": "Congo",
-      "skills": "ggraphic design",
-      "education": "Bsc. Economics",
-      "description": "ejihifir hefirhifhri",
+      "name": "Shamsiyya",
+      "email": "shams@yahoo.com",
+      "country": "Egypt",
+      "skill": "Animation",
+      "education": "BA. Literature",
+      "description": "I will design animations for your social media advert.",
       "id": 6
     },
     {
-      "name": "wqd",
-      "email": "eeefe@gmail.com",
-      "country": "Rwanda",
-      "skills": "seo expert",
-      "education": "Bsc. Economics",
-      "description": "dgjdoijg ognonws",
+      "name": "Kakuma",
+      "email": "fab@yahoo.com",
+      "country": "Kenya",
+      "skill": "data scientist",
+      "education": "Bsc. Statistics",
+      "description": "I will analyse and manage your data.",
       "id": 7
-    },
-    {
-      "name": "odumodu",
-      "email": "dds@yahoo.com",
-      "country": "Rwanda",
-      "skills": "ASP.Net developer",
-      "education": "Bsc. Computer science",
-      "description": "wfwefe wfefwe wf f",
-      "id": 8
-    },
-    {
-      "name": "fabian",
-      "email": "email@gmail.com",
-      "country": "Wakanda",
-      "skills": "seo expert",
-      "education": "BA. French",
-      "description": "uitpyiyho",
-      "id": 9
     }
   ]
 }

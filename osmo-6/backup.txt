@@ -1,0 +1,31 @@
+$('#get-freelancer').on('click', function() {
+        $.get('http://localhost:3000/freelancer', function(data){
+            for(let i = 0; i < data.lenght; i++){
+                $('#freelancer-name').append(`<h5>${data[i].name}</h5>`);
+            }
+        })
+    })
+        
+});
+
+/* $.ajax({
+            url: 'http:localhost:3000/freelancer',
+            contentType: 'application/json',
+            success: function(response){
+                var card = $('#card');
+
+                card.html('');
+
+                response.freelancer.forEach(function(freelance) {
+                   card.append('<h5 id="freelancer-name">'+freelance.name+'</h5>',
+                    '<li id="freelancer-email">'+freelance.email+'</li>',
+                    '<li id="freelancer-country">'+freelance.country+'</li>',
+                    '<li id="freelancer-skill">'+freelance.skill+'</li>',
+                    '<li id="freelancer-education>'+freelance.education+'</li>',
+                    '<p id="freelancer-description">'+freelance.description+'</p>');
+            
+                }
+        );
+    }
+
+})
