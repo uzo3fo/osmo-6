@@ -8,9 +8,6 @@ $(document).ready(function(){
         const urlArray = url.split("id=");
         let id = urlArray[1];
         id = parseInt(id);
-        
-        
-        
 
        $.get(`http://localhost:3000/freelancer/${id}`, function(data){
            console.log(data);
@@ -21,14 +18,9 @@ $(document).ready(function(){
            $("#skill").html(data.skill);
            $("#education").html(data.education);
            $("#description").html(data.description);
-          
+           $("#update-div").html('<a href="update.html?id='+data.id+'" class="btn btn-warning" id="update-button">UPDATE</a>');
            
-          
-   
-   
     })
-
-
 
     }
 
@@ -43,13 +35,28 @@ $(document).ready(function(){
           list += '<td>'+data[i].education+'</td>';
           list += '<td>'+data[i].description+'</td>';
           list += '<td>'+'<a href="view.html?id='+data[i].id+'" class="btn btn-primary" id="view-button">view</a>'+'</td>';
-          //list += '<td>'+'<buttton class="btn btn-danger" id="delete-button">Delete</button>'+'</td></tr>';
+          list += '<td>'+'<button  class="btn btn-danger del" value='+data[i].id+' id="delete-button">delete</button>'+'</td></tr>';
          
           
 
           $('table tbody').append(list);
       }
-  })
+      //delete 
+ $(".del").click(function(e){
+    e.preventDefault();
+    const id = $(this).val()
+ 
+    $.ajax({
+        url:`http://localhost:3000/freelancer/${id}`,
+        method: "DELETE",
+        success: function(res){
+            alert("Delete successful");
+        }
+     })
+   })
+})
+
+
 
   //post request
   $('#postForm').submit(function(e){
@@ -77,45 +84,49 @@ $(document).ready(function(){
       }
 
 
+     //update profile
+     if(path === "/update.html"){
+        console.log(path)
+        $('#update-button').click(function(e){
+          e.preventDefault();
 
+          let name = $("#editName").val();
+          let email = $("#editEmail").val();
+          let country = $("#editCountry").val();
+          let skill = $("#editSkill").val();
+          let education = $("#editEducation").val();
+          let description = $("#editDescription").val();
 
-     //
-     
-     
-     
+          //validation
+          if(name === ""||email === ""||country === ""|| skill === ""||education === ""||description === ""){
+              alert("please fill all input")
+          }else{
+              let data = {
+                  "name":name,
+                  "email": email,
+                  "country": country,
+                  "skill": skill,
+                  "education": education,
+                  "description": description
+              }
 
-  //put request (update profile)
-//  * $('#update-form').submit(function(e){
-//       e.preventDefault();
-//       var rowEl = $(this).closest('tr');
-//       var id = rowEl.find('.id').text();
-//       var newName = rowEl.find('.name').val();
-//       var newEmail = rowEl.find('.email').val();
-//       var newCountry = rowEl.find('.country').val();
-//       var newSkills = rowEl.find('.skills').val();
-//       var newEducation = rowEl.find('.education').val();
-//       var newDescription = rowEl.find('.description').val();
-  
-//       var data = {newName:newName,
-//                   newEmail:newEmail,
-//                   newCountry:newCountry, 
-//                   newSkiils:newSkills, 
-//                   newEducation:newEducation, 
-//                   newDescription:newDescription}
+              $.ajax({
+                  url:`http://localhost:3000/freelancer/${id}`,
+                  method: "PUT",
+                  data: data,
+                  success: function(res){
+                      window.location.replace("freelancer.html")
+                  }
+              })
+          }
+
+        })
+     }
+     
     
-//     $.ajax({
-//         url:'http://localhost3000/freelancer'+data[i].id,
-//         type: 'PUT',    
-//         data: data,
-//         contentType: 'application/json',
-//         success: function(data) {
-//           console.log(data);
-//           //$('#get-freelancer').click();
-//           $('#view-form').append(data);
-//       }
-    
-//          });
-//     });
+     
+
+ 
   });
   
 });
