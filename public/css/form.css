@@ -1,0 +1,41 @@
+body{
+    background:url(../images/daria-shevtsova-zK7pKR_Cixo-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: lato;
+}
+
+.container{
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+}
+#logo{
+    font-size: 700;
+    font-weight: 700;
+    font-family: cursive;
+}
+
+#postForm{
+    background:rgba(255,255,255, 0.5);
+    display: inline-block;
+    text-align: left;
+    margin: 20px auto;
+    padding: 40px;
+}
+#update-form{
+    background:rgba(255,255,255, 0.5);
+    display: inline-block;
+    text-align: left;
+    margin: 20px auto;
+    padding: 40px;
+}
+label{
+    display: block;
+    margin-bottom: 20px;   
+}
+#submit-button{
+    margin-top:20px;
+}
+
+

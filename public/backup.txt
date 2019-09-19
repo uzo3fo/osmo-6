@@ -1,0 +1,203 @@
+$('#get-freelancer').on('click', function() {
+        $.get('http://localhost:3000/freelancer', function(data){
+            for(let i = 0; i < data.lenght; i++){
+                $('#freelancer-name').append(`<h5>${data[i].name}</h5>`);
+            }
+        })
+    })
+        
+});
+
+/* $.ajax({
+            url: 'http:localhost:3000/freelancer',
+            contentType: 'application/json',
+            success: function(response){
+                var card = $('#card');
+
+                card.html('');
+
+                response.freelancer.forEach(function(freelance) {
+                   card.append('<h5 id="freelancer-name">'+freelance.name+'</h5>',
+                    '<li id="freelancer-email">'+freelance.email+'</li>',
+                    '<li id="freelancer-country">'+freelance.country+'</li>',
+                    '<li id="freelancer-skill">'+freelance.skill+'</li>',
+                    '<li id="freelancer-education>'+freelance.education+'</li>',
+                    '<p id="freelancer-description">'+freelance.description+'</p>');
+            
+                }
+        );
+    }
+
+})
+
+
+
+
+<div class="container">
+      <h1 id="sign-up">EDIT PROFILE</h1>
+    <form class="text-center" id="update-form">
+      
+     <div class="form-group p-1">
+        <label for="name">Name:  </label>
+        <input type="text" id="name" name="name">
+     </div>
+     <div class="form group p-1">
+        <label for="email">Email:  </label>
+        <input type="email" id="email" name="email">
+     </div>
+     <div class="form group p-1">
+      <label for="country">Country:  </label>
+      <input type="text" id="country" name="country">
+     </div>   
+     <div class="form group p-1">
+      <label for="skills">Skill: </label>
+      <input type="text" id="skill" name="skill">
+     </div>   
+     <div class="form group p-1">
+      <label for="education">Education:</label>
+      <input type="text" id="education" name="education">
+    </div>
+    <div class="form group">
+      <label for="description">Description:</label>
+      <textarea name="description" id="description" cols="30" rows="3"></textarea><br>
+      
+      <button type="submit" value="Submit" class="btn btn-primary" id="submit-button">Submit</button> 
+    </form>
+  </div>
+        
+
+        ////////////////////////////////////////////////////////////
+        //view
+
+  /*$('edit-form').submit( function(e){
+      e.preventDefault();
+
+
+  $.ajax({
+    url:'http://localhost3000/freelancer'+data[i].id,
+    type: 'GET',    
+    data: data,
+    contentType: 'application/json',
+    success: function(data) {
+      console.log(data);
+      $('#update-form').click();
+  }
+  
+});
+$('#update-form').append(`
+<div class="form-group p-1">
+        <label for="name">Name:  </label>
+        <input type="text" id="name" value="${data[i].name}" name="name">
+     </div>
+     <div class="form group p-1">
+        <label for="email">Email:  </label>
+        <input type="email" id="email" name="email">
+     </div>
+     <div class="form group p-1">
+      <label for="country">Country:  </label>
+      <input type="text" id="country" name="country">
+     </div>   
+     <div class="form group p-1">
+      <label for="skills">Skill: </label>
+      <input type="text" id="skill" name="skill">
+     </div>   
+     <div class="form group p-1">
+      <label for="education">Education:</label>
+      <input type="text" id="education" name="education">
+    </div>
+    <div class="form group">
+      <label for="description">Description:</label>
+      <textarea name="description" id="description" cols="30" rows="3"></textarea><br>
+      
+      <button type="submit" value="Submit" class="btn btn-primary" id="submit-button">Submit</button>
+`)
+});*/
+$.get("http://localhost:3000/freelancer"+data[i].id, function(e){
+    e.preventDefault();
+      var name =$('#name').val()
+      var email =$('#email').val()
+      var skill =$('#skill').val()
+      var country =$('#country').val()
+      var education =$('#education').val()
+      var description =$('#description').val()
+      //var url =$(this).attr('action');
+      
+        $.get("http://localhost:3000/freelancer"+data[i].id,
+            {name:name, email:email, country:country, skill:skill, education:education,description:description}).done(
+                function(data){
+                    console.log('post saved')
+                    $('#view-list tbody').append(data);
+                }
+            )
+
+    });
+
+    
+
+    
+});
+
+  
+
+
+
+ /* document.getElementById('postForm').addEventListener('submit', saveIssues);
+
+function saveIssues(e){
+    var nameIssue = document.getElementById('name').val();
+    var emailIssue = document.getElementById('email').val();
+    var countryIssue = document.getElementById('country').val();
+    var skillsIssue = document.getElementById('skills').val();
+    var eduIssue = document.getElementById('education').val();
+    var descIssue = document.getElementById('description').val();
+}
+
+   function fetchIssues(){
+      var freelancer = JSON.parse(localStorage.getItems('freelancer'));
+      var viewForms = document.getElementById(view-form);
+      issuesList.innerHtml = ''
+
+      for(var i = 0; i<freelancer.length; i++){
+          var id = freelancer[i].id;
+          var name = freelancer[i].name;
+          var email = freelancer[i].email;
+          var skills = freelancer[i].skills;
+          var country = freelancer[i].country;
+          var edu = freelancer[i].education;
+          var desc = freelancer[i].description;
+
+
+          issuesList.innerHtml += '<div class="well">'+
+                                   '<h5> NAME: '+name+'</h5>'+
+                                   '<p> EMAIL: '+email+'</p>'+
+                                   '<p> COUNTRY:'+country+'</p>'+
+                                   '<p> SKILLS:'+skills+'</p>'+
+                                   '<p> EDUCATION:'+education+'</p>'+
+                                   '<p> DESCRIPTION:'+description+'</p>'+
+                                   '<a href="#" class="btn btn-warning">'+UPDATE+'</a>'+
+                                   '<a href="#" class="btn btn-danger">'+DELETE+'</a>'+
+                                   '</div>';
+
+      }
+  } 
+    */
+
+  });
+
+
+
+
+
+  /////////////////////////////////////////////////////////////
+  <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+               <div id="content">
+                <h3> JOIN THE ELITE FREELANCERS</h3>
+                <hr>
+                <a href="form.html"><button class="btn btn-danger btn-lg m-2" id="get-started" >Get Started!</button></a>
+                <a href="freelancer.html"><button class="btn btn-danger btn-lg" id="get-freelancer" > Get A Freelancer</button></a>
+               </div>
+            </div>
+        </div>
+    </div>
