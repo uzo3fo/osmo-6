@@ -76,6 +76,7 @@ $(document).ready(function(){
             {name:name, email:email, country:country, skill:skill, education:education,description:description}).done(
                 function(data){
                     console.log('post saved')
+                    alert("sign-up successful")
                     $('table tbody').append(data);
                     
                 }

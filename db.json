@@ -19,15 +19,6 @@
       "id": 2
     },
     {
-      "name": "Kutz",
-      "email": "kutz@gmail.com",
-      "country": "Germany",
-      "skill": "Graphics designer",
-      "education": "BA. Fine Arts",
-      "description": "I will design quality logos, banners and illustrations for you.",
-      "id": 3
-    },
-    {
       "name": "Kim JUN UN",
       "email": "kjn@gmail.com",
       "country": "North Korea",
@@ -62,6 +53,42 @@
       "education": "Bsc. Statistics",
       "description": "I will analyse and manage your data.",
       "id": 7
+    },
+    {
+      "name": "chibuzor",
+      "email": "csc@gmail.com",
+      "country": "Rwanda",
+      "skill": "fgd",
+      "education": "Bsc. Computer science",
+      "description": "av",
+      "id": 8
+    },
+    {
+      "name": "Chambers",
+      "email": "bublles@gmail.com",
+      "country": "USA",
+      "skill": "VFX",
+      "education": "Bsc Chemistry",
+      "description": "I will edit  with quality effects.",
+      "id": 9
+    },
+    {
+      "name": "Chambers",
+      "email": "bublles@gmail.com",
+      "country": "USA",
+      "skill": "VFX",
+      "education": "Bsc Chemistry",
+      "description": "I will edit  with quality effects.",
+      "id": 10
+    },
+    {
+      "name": "Odumodu",
+      "email": "duduosun@gmail.com",
+      "country": "Congo",
+      "skill": "Web developer",
+      "education": "Bsc Botany",
+      "description": "I will design a website with beautiful and engaging user interface.",
+      "id": 11
     }
   ]
 }
