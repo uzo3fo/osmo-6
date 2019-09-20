@@ -2,7 +2,7 @@
 $(document).ready(function(){
     let path = $(location).attr('pathname');
     console.log(path);
-    
+    //To view a single object
      if(path === "/view.html"){
         const url = window.location.href;
         const urlArray = url.split("id=");
@@ -26,8 +26,8 @@ $(document).ready(function(){
 
     //get request
   $.get("http://localhost:3000/freelancer", function(data){
-      for(var i = 0; i < data.length; i++){
-          var list =  '<tr><td>'+data[i].id+'</td>';
+      for(let i = 0; i < data.length; i++){
+          let list =  '<tr><td>'+data[i].id+'</td>';
           list += '<td>'+data[i].name+'</td>';
           list += '<td>'+data[i].email+'</td>';
           list += '<td>'+data[i].country+'</td>';
@@ -35,39 +35,37 @@ $(document).ready(function(){
           list += '<td>'+data[i].education+'</td>';
           list += '<td>'+data[i].description+'</td>';
           list += '<td>'+'<a href="view.html?id='+data[i].id+'" class="btn btn-primary" id="view-button">view</a>'+'</td>';
-          list += '<td>'+'<button  class="btn btn-danger del" value='+data[i].id+' id="delete-button">delete</button>'+'</td></tr>';
+          list += '<td>'+'<button  class="btn btn-danger delete" value='+data[i].id+' id="delete-button">delete</button>'+'</td></tr>';
          
-          
-
           $('table tbody').append(list);
       }
+
       //delete 
- $(".del").click(function(e){
-    e.preventDefault();
-    const id = $(this).val()
+       $(".delete").click(function(e){
+           e.preventDefault();
+           const id = $(this).val()
  
-    $.ajax({
-        url:`http://localhost:3000/freelancer/${id}`,
-        method: "DELETE",
-        success: function(res){
+        $.ajax({
+           url:`http://localhost:3000/freelancer/${id}`,
+           method: "DELETE",
+           success: function(res){
             alert("Delete successful");
-        }
+          }
+       })
      })
-   })
-})
-
-
+  })
 
   //post request
   $('#postForm').submit(function(e){
       e.preventDefault();
-      var name =$('#name').val()
-      var email =$('#email').val()
-      var skill =$('#skill').val()
-      var country =$('#country').val()
-      var education =$('#education').val()
-      var description =$('#description').val()
-      var url =$(this).attr('action');
+      let name =$('#name').val()
+      let email =$('#email').val()
+      let skill =$('#skill').val()
+      let country =$('#country').val()
+      let education =$('#education').val()
+      let description =$('#description').val()
+      let url =$(this).attr('action');
+      //validation
       if(name === ''|| email === ''||skill === ''|| country === ''|| education === ''||description === ''){
           alert('Please fill in all fields')
       }
@@ -76,7 +74,7 @@ $(document).ready(function(){
             {name:name, email:email, country:country, skill:skill, education:education,description:description}).done(
                 function(data){
                     console.log('post saved')
-                    alert("sign-up successful")
+                    alert("sign-up successful. Refresh page")
                     $('table tbody').append(data);
                     
                 }
@@ -85,8 +83,8 @@ $(document).ready(function(){
       }
 
 
-     //update profile
-     if(path === "/update.html"){
+ //update profile
+    if(path === "/update.html"){
         console.log(path)
         $('#update-button').click(function(e){
           e.preventDefault();

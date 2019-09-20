@@ -55,15 +55,6 @@
       "id": 7
     },
     {
-      "name": "chibuzor",
-      "email": "csc@gmail.com",
-      "country": "Rwanda",
-      "skill": "fgd",
-      "education": "Bsc. Computer science",
-      "description": "av",
-      "id": 8
-    },
-    {
       "name": "Chambers",
       "email": "bublles@gmail.com",
       "country": "USA",
@@ -89,6 +80,60 @@
       "education": "Bsc Botany",
       "description": "I will design a website with beautiful and engaging user interface.",
       "id": 11
+    },
+    {
+      "name": "chibuzor",
+      "email": "csc@gmail.com",
+      "country": "Rwanda",
+      "skill": "Web developer",
+      "education": "Bsc. Computer science",
+      "description": "agr",
+      "id": 12
+    },
+    {
+      "name": "fabian",
+      "email": "dds@yahoo.com",
+      "country": "Wakanda",
+      "skill": "Web developer",
+      "education": "Bsc. Computer science",
+      "description": "xhg",
+      "id": 13
+    },
+    {
+      "name": "wqd",
+      "email": "dds@yahoo.com",
+      "country": "Finland",
+      "skill": "Graphics designer",
+      "education": "Bsc. Economics",
+      "description": "htrht",
+      "id": 14
+    },
+    {
+      "name": "chibuzor",
+      "email": "csc@gmail.com",
+      "country": "Rwanda",
+      "skill": "content writer",
+      "education": "BA. French",
+      "description": "o",
+      "id": 15
+    },
+    {
+      "name": "fabian",
+      "email": "email@gmail.com",
+      "country": "Congo",
+      "skill": "Graphics designer",
+      "education": "BA. Fine Arts",
+      "description": "jk",
+      "id": 16
+    },
+    {
+      "name": "fabian",
+      "email": "csc@gmail.com",
+      "country": "Rwanda",
+      "skill": "fgd",
+      "education": "BA. French",
+      "description": "d",
+      "id": 17
     }
   ]
 }
