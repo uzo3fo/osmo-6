@@ -49,7 +49,7 @@ $(document).ready(function(){
            url:`http://localhost:3000/freelancer/${id}`,
            method: "DELETE",
            success: function(res){
-            alert("Delete successful");
+            alert("Delete successful. please refresh");
           }
        })
      })
